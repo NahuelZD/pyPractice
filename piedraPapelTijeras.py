@@ -1,6 +1,6 @@
 # Piedra papel o tijera muy básico
-userOption = input('piedra, papel o tijeras: ')
-npcOption = input('NPC: ')
+userOption = input('piedra, papel o tijeras: ').lower()
+npcOption = input('NPC: ').lower()
 
 if(userOption == npcOption):
     print('Empate')
