@@ -1,8 +1,16 @@
 # Piedra papel o tijera muy básico
-userOption = input('piedra, papel o tijeras: ').lower()
-npcOption = input('NPC: ').lower()
+import random
+opciones = ('piedra', 'papel', 'tijera')
 
-if(userOption == npcOption):
+userOption = input('piedra, papel o tijeras: ').lower()
+npcOption = random.choice(opciones)
+
+print('NPC -> ', npcOption)
+print('Tú elección -> ', userOption)
+
+if not userOption in opciones:
+    print('Esa opción no es válida, pescao!')
+elif(userOption == npcOption):
     print('Empate')
 elif(userOption == 'papel'):
     if(npcOption == 'piedra'):
